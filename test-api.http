@@ -1,0 +1,38 @@
+### Solayer SwapBot API 测试文件
+
+### 1. 生成钱包
+POST http://localhost:3000/api/wallet/generate
+Content-Type: application/json
+
+{
+  "count": 5
+}
+
+### 2. 获取所有钱包
+GET http://localhost:3000/api/wallet
+
+### 3. 获取钱包统计
+GET http://localhost:3000/api/wallet/stats/summary
+
+### 4. 更新钱包余额
+POST http://localhost:3000/api/wallet/update-balances
+
+### 5. 获取领水统计
+GET http://localhost:3000/api/faucet/stats
+
+### 6. 获取队列状态
+GET http://localhost:3000/api/faucet/queue/status
+
+### 7. 为所有钱包申请领水 (需要先配置 FAUCET_URL)
+# POST http://localhost:3000/api/faucet/request-all
+
+### 8. 批量领水测试
+# POST http://localhost:3000/api/faucet/batch
+# Content-Type: application/json
+# 
+# {
+#   "addresses": [
+#     "钱包地址1",
+#     "钱包地址2"
+#   ]
+# } 

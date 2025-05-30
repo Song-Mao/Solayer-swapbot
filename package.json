@@ -1,0 +1,59 @@
+{
+  "name": "solayer-swapbot",
+  "version": "1.0.0",
+  "description": "Solayer 开发网自动领水和 Swap 机器人",
+  "author": "Your Name",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "nodemon",
+    "start:debug": "nest start --debug --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/schedule": "^4.0.0",
+    "@solana/spl-token": "^0.4.0",
+    "@solana/web3.js": "^1.87.6",
+    "@types/uuid": "^10.0.0",
+    "bs58": "^5.0.0",
+    "class-transformer": "^0.5.0",
+    "class-validator": "^0.14.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "@types/node": "^20.0.0",
+    "nodemon": "^3.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
